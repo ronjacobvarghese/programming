@@ -1,0 +1,38 @@
+create table dept (
+dno varchar(6)primary key,
+dname varchar(20) not null,
+emp_nos int 
+);
+create table emp(
+eno varchar(6) primary key,
+ename varchar(20) not null,
+basic_sal numeric(6,2) default 5000,
+incentive numeric(6,2) check (incentive<=basic_sal),
+dept_no varchar(6),
+foreign key (dept_no) references dept(dno),
+mgr_id varchar(6),
+foreign key (mgr_id) references emp(eno)
+);
+drop table emp
+ALTER TABLE emp
+add joiningdate date;
+
+alter table dept
+add hod varchar(50);
+
+insert into dept values
+('101','CSE','19301','Gilgamish'),
+('102','PHY','19302','steins'),
+('103','CHE','19303','gray');
+insert into emp values
+('e1','jenny',4000.00,2000.00,'101','e1'),
+('e2','jemmy',6000.00,1000.00,'101','e2'),
+('e3','jelly',3000.00,1500.00,'102','e3');
+
+
+select eno from emp where dept_no='101';
+select eno, ename, joiningdate from emp;
+
+select * from dept;
+
+
