@@ -1,4 +1,3 @@
-
 public class Complex{
     private float realPart;
     private float imaginaryPart;
