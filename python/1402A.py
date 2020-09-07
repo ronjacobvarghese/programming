@@ -10,5 +10,5 @@ c.sort()
 d=x*(x+1)//2
 for i in range(n):
     x-=c[i][1]
-    d+=(i+2)*x*(x+1)//2
-print(d%(10**9+7))
+    d=d+((i+2)*x*(x+1)//2)%(10**9+7)
+print(d)
