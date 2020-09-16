@@ -1,26 +1,19 @@
         
 for _ in range(int(input())):
     n=int(input())
-    a=list(map(int,input().split()))
-    if a==[1,1]:
+    a=list(input().split())
+    x=a.count('1');y=a.count('0')
+
+    if a==['1','1']:
         print(n)
-        print(1,1)
-    elif (n//2)%2==0 or n==2:
-        if a.count(0)>=n//2:
-            print(n//2)
-            print('0 '*(n//2))
+        print('1 1')
+    elif x>y:
+        if x%2==0:
+            print(x)
+            print('1 '*x)
         else:
-            print(n//2)
-            print('1 '*(n//2))
+            print(x-1)
+            print('1 '*(x-1))
     else:
-        if a.count(0)>=n//2:
-            print(n//2)
-            print('0 '*((n//2)))
-        else:
-            print(n//2+1)
-            print('1 '*((n//2)-1),'0')
-        
-        
-        
-            
-        
+        print(y)
+        print("0 "*y)
