@@ -1,9 +1,7 @@
 import java.util.*;
-public class q4 {
-    public static void main(String[] args){
+class myfunc {
+    static void pangram(String a){
         String s ="abcdefghijklmnopqrstuvwxyz";
-        Scanner scan=new Scanner(System.in);
-        String a=scan.nextLine();
         a=a.toLowerCase();
         for (int i=0;i<26;i++){
             if (a.contains(s.substring(i,i+1))) continue;
@@ -11,4 +9,14 @@ public class q4 {
         }
         System.out.println("Yes");
     }
+}
+public class q4{
+
+    public static void main(String[] args){
+        Scanner scan=new Scanner(System.in);
+        String a=scan.nextLine();
+        myfunc.pangram(a);
+    }
+
+
 }
