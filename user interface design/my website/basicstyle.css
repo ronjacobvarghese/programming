@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    text-decoration:none;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 0px;
+    margin:0;
+    background: white;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background:#a4123f;
+  }
+  
+  .header h1 {
+    font-size: 50px;
+    color:white;
+  }
+  h2{
+    display:block;
+  }
+
+
+
+
+
+
+
+
+  /* Navigation Styles*/
+.topnav{
+  background-color:#79092b;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;  
+}
+.leftside{
+  display:flex;
+}
+.navlinks{
+  padding:14px 16px;
+  transition: border-bottom 0.5s;
+  transition: background-color 0.5s;  
+}
+.navlinks:hover{
+  background-color:rgba(235, 232, 232, 0.425);
+}
+.navlinks a{
+  color:white;
+  border-bottom:1px solid transparent;
+  transition: border-bottom 0.5s;
+  transition: background-color 0.5s;
+}
+.navlinks a:hover{
+  border-bottom:1px solid white;
+}
+.active{
+  background-color:rgba(235, 232, 232, 0.425);
+  border-bottom:1px solid white;
+}
+
+
+
+
+  
+/*Home style*/
+.home-container{
+  width: 100%;
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.card{
+  position: relative;
+  background-color: rgb(228, 225, 225);
+  height:500px;
+  margin:20px;
+}
+.card  h2{
+  padding:30px 20px 20px 30px;
+}
+.card p{
+  padding:10px;
+  padding-left: 20px;
+}
+.card1{
+  margin-top: 10px;
+  background-color: rgb(228, 225, 225);
+  height: 200px;
+}
+.card1 h2{
+  display:inline-block;
+  padding:20px 20px 20px 30px;
+  color:purple;
+}
+.card3{
+  margin-top: 10px;
+}
+.card3 h2{
+  padding:10px;
+  padding-left:20px;
+}
+.card1 i{
+  color:purple;
+  display:block;
+  width:100%;
+  padding:10px;
+  padding-left:20px;
+  font-size: 20px;
+}
+.card .img{
+  padding:10px;
+  padding-left:30px
+}
+.card:hover{
+  background-color: rgba(228, 225, 225, 0.671);
+}
+.log:hover{
+  background-color: rgba(228, 225, 225, 0.671);
+
+}
+.footer{
+  padding:40px;
+  text-align:center;
+  background-color: #a4123f;
+  color:white;
+  width:100%;
+
+}
+
+
+
+
+
+
+
+
+
+  
+  /*about me styles*/
+  .about-container{
+    width:98%;
+    margin: 20px;
+  }
+  .profile-wrapper{
+    position:relative;
+    margin-right:20px;
+    padding:20px;
+    background-color:rgb(228, 225, 225) ;
+    height:300px;
+  }
+  .profile-text{
+    position:absolute;
+    bottom:10px;
+    left:300px;
+    padding:20px;
+    font-size:20px
+  }
+  .p-head{
+    font-size:30px;
+    color:rgb(173, 30, 30) !important;
+  }
+  .about-wrapper{
+    background-color: rgb(228, 225, 225);
+    padding:20px;
+    line-height:30px;
+    margin:20px 20px 20px 0;
+    font-size:20px
+  }
+
+
+
