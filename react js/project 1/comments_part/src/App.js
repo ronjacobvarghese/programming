@@ -1,7 +1,8 @@
 import React,{ useState , useEffect}from 'react';
-import { Button , Input , FormControl ,List ,ListItem,ListItemText} from '@material-ui/core';
+import { Button , Input , FormControl,List} from '@material-ui/core';
 import db from './firebase'
 import './App.css';
+import Comment from './Comment';
 import firebase from 'firebase';
 
 function App() {
@@ -43,14 +44,9 @@ function App() {
       {console.log(comments)}
     </form>
     <ul>
-      {comments.map(comment =>(
-        <List>
-          <ListItem>
-            <ListItemText primary={comment.comment} secondary={comment.name}/>
-          </ListItem>
-        </List>
-      ))}
-
+      <List>
+      {comments.map(comment =>(Comment(comment)))}
+      </List>
     </ul>
     </div>
   );
