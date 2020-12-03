@@ -123,6 +123,7 @@
     const subjects=document.querySelectorAll('.card');
     subjects.forEach(subject =>{
         subject.addEventListener("mouseover",i => {
+            console.log(subject);
             subject.childNodes[1].classList.add('shadow');
         })
         subject.addEventListener("mouseout",i => {

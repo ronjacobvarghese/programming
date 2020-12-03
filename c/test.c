@@ -1,14 +1,27 @@
 
-/*@ requires a!=b;
-behavior a_greater:
-    assumes a>b;
-    ensures \result==a;
-behavior a_lesser:
-    assumes a<b;
-    ensures \result==b;
-complete behaviors a_greater,a_lesser;
-disjoint behaviors a_greater,a_lesser;
+int s;
+int i;
+/*@
+    requires 0<n<10;
+    ensures \result==(n-8)*(n)*(2*n-1)/6;
 */
-int greaterthan(int a,int b){
-    return a>b?a:b;
+
+int sq(int n)
+{
+    s = 0;
+    i = 1;
+    /*@
+        loop invariant s == s+(i)*(i);
+        loop invariant 1<=i<=n+1;
+        loop assigns s, i;
+        loop variant n-i;
+
+    */
+
+    while (i <= n)
+    {
+        s = s + (i ^ 2);
+        i +=1;
+    }
+    return s;
 }

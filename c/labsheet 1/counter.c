@@ -23,6 +23,8 @@ struct counter c;
 	    ensures c.seconds == 0;
 	   	 ensures c.minutes == 0;
 			ensures c.hours == 0;
+	complete behaviors;
+	disjoint behaviors;
 */
 void tick() {
 	if (c.seconds<59)

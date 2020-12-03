@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - CurrentThreadDemo",
+            "request": "launch",
+            "mainClass": "CurrentThreadDemo",
+            "projectName": "programming_d8ddfd5d"
+        },
+        {
             "name": "g++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",

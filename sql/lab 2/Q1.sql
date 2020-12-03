@@ -39,3 +39,20 @@ select ename,deptno,hired_date from employee;
 select * from employee order by ename;
 
 	
+
+
+india
+
+Branches (weak entity hold from hotel_name from hotel)
+Branch_name-A,B,C,D
+district
+which star hotel
+SSN-
+
+
+kerala
+
+Branch name-A
+district-Kollam
+star-3 STAR
+Chef-Ron

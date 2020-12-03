@@ -14,12 +14,10 @@ function App() {
   useEffect(() => {
     //this code fires when the app loads or whenever the input changes;
       db.collection('comments').orderBy('timestamp','desc').onSnapshot(snapshot =>{
-        console.log(snapshot.docs.map(doc => doc.data().comment));
-        setComments(snapshot.docs.map(doc => doc.data()));
+        setComments(snapshot.docs.map(doc => ({id: doc.id ,comment :doc.data().comment,name: doc.data().name})));
       })
     },[]);
   const addComments=(event)=>{
-    console.log('it is working');
     db.collection('comments').add({
       comment: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
@@ -32,21 +30,14 @@ function App() {
     <div className="App">
       <center> <h1>Comments prototype</h1></center>
       <form>
-      <FormControl>
-      <div class="name_wrapper">
-        <Input  placeholder="Enter name" id='name' value={name} onChange={event => setName(event.target.value)}/>
-      </div>
-      <div class="text-wrapper">
-      <Input  placeholder="Enter text" id='message' value={input} onChange={event => setInput(event.target.value)}/>
-      </div>
-        <Button type="submit" id='button' onClick={addComments} variant="contained" color="primary">Comments?</Button>
-      </FormControl>
-      {console.log(comments)}
+      <form className="Form">
+      <input  placeholder="Enter name" id='name' className='Name' value={name} onChange={event => setName(event.target.value)}/>
+      <input  placeholder="Enter text" className='message' id='message' value={input} onChange={event => setInput(event.target.value)}/>
+      <button type="submit" className='button' disabled={!input} id='button' onClick={addComments}>Comments?</button>
+      </form>
     </form>
     <ul>
-      <List>
       {comments.map(comment =>(Comment(comment)))}
-      </List>
     </ul>
     </div>
   );

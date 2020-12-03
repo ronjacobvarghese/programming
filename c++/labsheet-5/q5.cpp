@@ -2,6 +2,7 @@
 #include<set>
 #include<utility>
 #include<map>
+#include<vector>
 using namespace std;
 int main(){
     map<string,int,greater<string>> a;
@@ -22,9 +23,9 @@ int main(){
     map<string,int>b(a.begin(),a.end());
     cout<<"The name in ascending order:"<<endl;
     for(auto& l:b) cout<<l.first<<" "<<l.second<<endl;
-    map<int,string>c;
+    vector<pair<int,string>>c;
     cout<<"The roll_no in ascending order:"<<endl;
-    for(auto& l:a)c.emplace(l.second,l.first);
+    for(auto& l:a)c.push_back(make_pair(l.second,l.first));
     for(auto& l:c)cout<<l.first<<" "<<l.second<<endl;
     map<int,string,greater<int>>d(c.begin(),c.end());
     cout<<"The roll_no in descending order:"<<endl;
